@@ -1,0 +1,11 @@
+.app {
+  text-align: center;
+  padding: 2rem;
+}
+
+.container {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
