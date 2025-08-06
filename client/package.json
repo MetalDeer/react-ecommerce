@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack serve --open",
     "build": "NODE_ENV=production webpack",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "generate-scss-types": "typed-scss-modules src --watch --exportType default"
   },
   "keywords": [],
   "author": "",
@@ -30,6 +31,7 @@
     "sass": "^1.90.0",
     "sass-loader": "^16.0.5",
     "style-loader": "^4.0.0",
+    "typed-scss-modules": "^8.1.1",
     "typescript": "^5.9.2",
     "typescript-plugin-css-modules": "^5.2.0",
     "webpack": "^5.101.0",

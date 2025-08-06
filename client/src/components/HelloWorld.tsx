@@ -1,5 +1,5 @@
 import React from 'react';
-import * as styles from './HelloWorld.module.css';
+import * as styles from './HelloWorld.module.scss';
 
 const HelloWorld: React.FC = () => {
     return (

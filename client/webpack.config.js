@@ -56,6 +56,37 @@ module.exports = {
                     'postcss-loader'
                 ]
             },
+
+            {
+                test: /\.module\.scss$/,
+                use: [
+                    isProd ? MiniCssExtractPlugin.loader : 'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: {
+                                localIdentName: '[name]__[local]--[hash:base64:5]',
+                            },
+                            importLoaders: 2,
+                        }
+                    },
+                    'postcss-loader',
+                    'sass-loader'
+                ]
+            },
+
+            // Rule 2: Global SCSS (regular .scss files)
+            {
+                test: /\.scss$/,
+                exclude: /\.module\.scss$/,
+                use: [
+                    isProd ? MiniCssExtractPlugin.loader : 'style-loader',
+                    'css-loader',
+                    'postcss-loader',
+                    'sass-loader'
+                ]
+            },
+
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource'
